@@ -1,0 +1,13 @@
+FROM python:3.7-slim
+
+LABEL author='solay@yandex.ru' version=1
+
+WORKDIR /app
+
+COPY requirements.txt .
+
+RUN pip3 install -r requirements.txt --no-cache-dir
+
+COPY ./ /app
+
+CMD ["gunicorn", "api_yamdb.wsgi:application", "--bind", "0:8000" ]
