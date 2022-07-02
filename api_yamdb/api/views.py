@@ -1,21 +1,15 @@
 import django_filters.rest_framework
 from django.shortcuts import get_object_or_404
 from rest_framework import filters, mixins, permissions, viewsets
-from rest_framework.pagination import (
-    LimitOffsetPagination,
-    PageNumberPagination,
-)
+from rest_framework.pagination import (LimitOffsetPagination,
+                                       PageNumberPagination)
+
 from reviews.models import Category, Comment, Genre, Review, Title
 
 from .filters import CustomTitlesFilter
 from .permissions import IsAdminOrSuper, ReviewComment
-from .serializers import (
-    CategorySerializer,
-    CommentSerializer,
-    GenreSerializer,
-    ReviewSerializer,
-    TitlesSerializer,
-)
+from .serializers import (CategorySerializer, CommentSerializer,
+                          GenreSerializer, ReviewSerializer, TitlesSerializer)
 
 PERMISSION_CLASSES = [
     permissions.AllowAny,

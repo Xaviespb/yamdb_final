@@ -1,20 +1,17 @@
 import uuid
 
 from django.core.mail import send_mail
-from rest_framework import viewsets, filters, status, permissions
-from rest_framework.decorators import action
 from django.shortcuts import get_object_or_404
+from rest_framework import filters, permissions, status, viewsets
+from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import AccessToken
 
 from .models import User
 from .permissions import IsAdminOrSuper
-from .serializers import (
-    CustomUserSerializer,
-    SignUpSerializer,
-    TokenSerializer,
-)
+from .serializers import (CustomUserSerializer, SignUpSerializer,
+                          TokenSerializer)
 
 
 class UserViewSet(viewsets.ModelViewSet):
