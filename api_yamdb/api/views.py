@@ -3,7 +3,6 @@ from django.shortcuts import get_object_or_404
 from rest_framework import filters, mixins, permissions, viewsets
 from rest_framework.pagination import (LimitOffsetPagination,
                                        PageNumberPagination)
-
 from reviews.models import Category, Comment, Genre, Review, Title
 
 from .filters import CustomTitlesFilter

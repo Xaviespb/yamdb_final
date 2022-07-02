@@ -1,5 +1,4 @@
 from django_filters import CharFilter, FilterSet
-
 from reviews.models import Title
 
 # isort прошел два раза-ничего не поменялось
