@@ -7,7 +7,7 @@ services:
     env_file:
       - ./.env
   web:
-    image: xavie/yamdb_final:latest
+    image: xavie/yamdb:latest
     restart: always
     volumes:
       - static_value:/app/static/
