@@ -10,8 +10,8 @@ services:
     image: xavie/yamdb:latest
     restart: always
     volumes:
-      - static_value:/app/static/
-      - media_value:/app/media/
+      - static_value:/static/
+      - media_value:/media/
     depends_on:
       - db
     env_file:
