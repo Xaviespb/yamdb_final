@@ -16,7 +16,7 @@ DEBUG = False
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
 
-ALLOWED_HOSTS = ['web']
+ALLOWED_HOSTS = ['*']
 AUTH_USER_MODEL = "users.User"
 
 # Application definition
@@ -112,8 +112,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 
 STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = [BASE_DIR + '/api/static/']
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+#STATICFILES_DIRS = [BASE_DIR + '/api/static/']
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
